@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id = "tenPoint" class="com.example.pkg.Point">
+        <property name="x"  value="10"/>
+        <property name="y" value="10"/>
+    </bean>
+
+    <bean id="fourPoint" class="com.example.pkg.Point">
+        <constructor-arg name="x" type="int" value="4"/>
+        <constructor-arg name="y" value="4"/>
+        <constructor-arg name="message" value=":passed from bean.xml:" />
+    </bean>
+
+    <bean name="calc" class="com.example.pkg.Calculator">
+        <constructor-arg name="num1" value="10"/>
+        <constructor-arg name="num2" value="5"/>
+    </bean>
+
+    <bean name="dog" class="com.example.pkg.Animal">
+        <constructor-arg name="speciesName" value="German Shepherd"/>
+        <constructor-arg name="height" value="3.5"/>
+        <constructor-arg name="weight" value="50.0"/>
+    </bean>
+</beans>
+
